@@ -1,0 +1,271 @@
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center;
+}
+.navbar{
+  width: 85%;
+  margin:auto;
+  padding:35px 0;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.navbar ul li{
+  list-style: none;
+  display:inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after{
+  content: '';
+  height:3px;
+  width: 0%;
+  background: #ab20fd;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition:0.2s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+.content{
+  width: 1000px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  color: #fff;
+
+}
+.content h1{
+  font-size: 70px;
+  margin-top: 50px;
+  margin: 50px;
+}
+
+.content h2{
+  margin-top: 20px;
+}
+.content p{
+  margin: 20px auto;
+  font-weight:100;
+  line-height:25px;
+  margin-top: 20px;
+}
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #ab20fd;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position:relative;
+  overflow: hidden;
+}
+span{
+  background: #ab20fd;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.2s;
+}
+button:hover span{
+  width: 100%;
+}
+button:hover{
+  border: none;
+  background: #ab20fd;
+}
+
+button h3{
+  color: black;
+}
+
+button:hover h3{
+  color: white;
+}
+.content img{
+  width: 30%;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 95%;
+  width: 100%;
+  margin-bottom: 1000px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 2px solid #ffffff;
+  box-shadow: 0 30px 40px rgba(0,0,0,.1);
+}
+
+.footer h3{
+  margin-top:15px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.quiz p{
+  text-align: left;
+  color: #ab20fd;
+  cursor: pointer;
+}
+#button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #ab20fd;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position:relative;
+  overflow: hidden;
+}
+
+.question{
+  padding: 20px;
+  font-size: 22px;
+  background: #ab20fd;
+  border-radius: 20px;
+  margin: 10px 0 10px 0;
+  color: #fff;
+}
+
+
+.option:hover{
+  background: #ab20fd;
+}
+
+.option input:checked .option{
+  background: #ab20fd;
+  color: black;
+}
+
+.quiz-wrapper{
+  height: 430px;
+  width: 600px;
+  background-color: white;
+  margin: 100px auto;
+  border-radius: 8px;
+  padding:25px
+}
+
+.quiz-wrapper .question{
+  min-height: 40px;
+  background-color: #ab20fd;
+  border-radius: 8px;
+  color: white;
+  padding: 15px;
+  float: left;
+  width: 95%;
+  font-size: 25px;
+  margin: 30px auto;
+}
+
+.quiz-wrapper .options{
+  float: left;
+  width: 100%;
+}
+
+.quiz-wrapper .options ul{
+  list-style: none;
+  padding: 0%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.quiz-wrapper .options ul li{
+  display: inline-block;
+  background-color: #607d8b;
+  width: 41%;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin: 10px;
+  color:white;
+  box-shadow: 0px 3px 0px grey;
+  cursor: pointer;
+}
+
+.quiz-wrapper .options ul li.correct{
+  background-color: rgb(83, 212, 83);
+  box-shadow: 0px 3px 0px grey;
+}
+
+.quiz-wrapper .options ul li.wrong{
+  background-color: rgb(253, 66, 66);
+  box-shadow: 0px 3px 0px grey;
+}
+
+.quiz-wrapper .options ul li:active{
+  box-shadow: 0px 0px 0px  rgb(84, 110, 179);
+}
+
+.quiz-wrapper .score {
+  float: left;
+  width: 100%;
+}
+
+.quiz-wrapper .score .next{
+  width: 40%;
+  float: left;
+}
+
+
+.quiz-wrapper .score .score-card{
+  width: 15%;
+  float: right;
+  line-height: 40px;
+  margin: 10px;
+  font-size: 20px;
+  
+}
+
+.quiz-wrapper .score .score-card{
+  background-color: rgb(83, 212, 83);
+  padding: 5px 20px;
+  overflow: auto;
+  border: none;
+  color:white;
+  border-radius: 8px;
+}
+
+.footer h3 {
+  text-transform:none;
+
+}
